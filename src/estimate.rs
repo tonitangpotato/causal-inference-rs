@@ -124,7 +124,7 @@ pub fn estimate_iv(
     // Check instrument relevance (first-stage F-stat)
     let t_mean = t_vec.mean();
     let sst_1: f64 = t_vals[..n].iter().map(|v| (v - t_mean).powi(2)).sum();
-    let first_stage_f = if stage1.sse > 1e-10 {
+    let _first_stage_f = if stage1.sse > 1e-10 {
         ((sst_1 - stage1.sse) / 1.0) / (stage1.sse / (n - 2) as f64)
     } else {
         f64::INFINITY

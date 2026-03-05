@@ -2,18 +2,19 @@
 name = "causal-inference"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.70"
 authors = ["The Unusual <hello@the-unusual.ai>"]
 description = "Causal inference in Rust — Pearl's do-calculus, backdoor/front-door adjustment, IV estimation, Granger causality, and refutation tests"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/tonioyeme/causal-inference-rs"
+homepage = "https://github.com/tonioyeme/causal-inference-rs"
+documentation = "https://docs.rs/causal-inference"
 keywords = ["causal-inference", "statistics", "dowhy", "pearl", "econometrics"]
 categories = ["science", "mathematics"]
 readme = "README.md"
+exclude = ["/target", "/.git"]
 
 [dependencies]
 nalgebra = "0.33"
 statrs = "0.18"
 thiserror = "2"
-
-[dev-dependencies]
-tokio = { version = "1", features = ["full"] }
